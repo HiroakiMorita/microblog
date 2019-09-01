@@ -7,10 +7,13 @@
                 <h2 class="post-title">
                     {{ blog.content }}
                 </h2>
-            <p class="post-meta">{{ object.posted_date }}</p>
+            <p class="post-meta">{{ object.posted_date|date:"Y/m/d h:m" }}</p>
         </div>
+
+        {% if user.is_authenticated %}
         <a href="{% url 'update' object.id %}" class="btn btn-primary">編集</a>
         <a href="{% url 'delete' object.id %}" class="btn btn-danger">削除</a>
+        {% endif %}
     </div>
  </div>
 {% endblock %}
