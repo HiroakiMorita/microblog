@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <h1>ログアウトしました</h1>
+  <form method="POST" action="{% url 'login' %}">
+  {% csrf_token %}
+  <table class="table">
+    {{ form }}
+  </table>
+  <button type="submit">ログアウト</button>
+  </form>
+{% endblock %}
