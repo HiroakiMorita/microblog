@@ -7,7 +7,7 @@
                 <h2 class="post-title">
                     {{ blog.content }}
                 </h2>
-            <p class="post-meta">{{ object.posted_date|date:"Y/m/d h:m" }}</p>
+            <p class="post-meta">{{ object.posted_date }}</p>
         </div>
 
         {% if user.is_authenticated %}
